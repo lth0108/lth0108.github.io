@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="boardBasicMybatis">
+
+	<select id="getSelectAll" resultType="boardBasicMybatis.model.dto.BoardBasicMybatisDTO">
+		select * from ${table_name} order by ref desc, re_level asc
+	</select>
+	
+	<select id="getSelectOne" resultType="boardBasicMybatis.model.dto.BoardBasicMybatisDTO">
+		select * from ${table_name} where no = #{no}
+	</select>
+	
+	<select id="getMaxNum" resultType="int">
+		select nvl(max(num),0) from ${table_name}
+	</select>
+	
+	<select id="getMaxRef" resultType="int">
+		select nvl(max(ref),0) from ${table_name}
+	</select>
+	
+	<insert id="setInsert">
+		<selectKey keyProperty="no" resultType="int" order="BEFORE">
+			select seq_boardbasic.nextval from dual
+		</selectKey>
+		insert into ${table_name} ( 
+		no,	num, writer, subject, content, email, password, ref, re_step, re_level, hit, regi_date) 
+		values ( #{no}, #{dto.num}, #{dto.writer}, #{dto.subject}, #{dto.content}, #{dto.email}, 
+		#{dto.password}, #{dto.ref}, #{dto.re_step}, #{dto.re_level}, #{dto.hit}, sysdate )
+	</insert>
+	
+	<update id="setUpdate">
+		update ${table_name} set subject = #{dto.subject}, content = #{dto.content}, email = #{dto.email} where no = #{dto.no}
+	</update>
+	
+	<delete id="setDelete">
+		delete from ${table_name} where no = #{dto.no}
+	</delete>
+	
+	<update id="setUpdateReLevel">
+		update ${table_name} set re_level = (re_level + 1) where ref = #{dto.ref} and re_level >#{dto.re_level} 
+	</update>
+</mapper>

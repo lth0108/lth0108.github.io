@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+	<select id="getSelectAll" resultType="member.model.dto.MemberDTO">
+		select * from ${table_member} where 1 = 1 and ${search_option} like '%' || #{search_data} || '%'
+	</select>
+	
+	<select id="getSelectOne" resultType="member.model.dto.MemberDTO">
+		select * from ${table_member} where no = #{no}
+	</select>
+				
+	<select id="getLogin" resultType="member.model.dto.MemberDTO">
+		select * from ${table_member} where id = #{dto.id} and password = #{dto.password}
+	</select>
+	
+	<select id="getTotalRecord" resultType="int">
+		select count(*) from ${table_member} where 1 = 1 and ${search_option} like '%' || #{search_data} || '%'
+	</select>
+	
+	<insert id="setInsert">
+		<selectKey keyProperty="no" resultType="int" order="BEFORE">
+			select seq_member.nextval from dual
+		</selectKey>
+		insert into ${table_member} ( no, id, password, name, phone, email, addr, grade, regi_date ) 
+		values ( #{no}, #{dto.id}, #{dto.password}, #{dto.name}, #{dto.phone}, #{dto.email}, #{dto.addr}, #{dto.grade}, sysdate )
+	</insert>
+	
+	<update id="setUpdate">
+		update ${table_member} set name = #{dto.name}, phone = #{dto.phone}, addr = #{dto.addr} where no = #{dto.no}
+	</update>
+	
+	<update id="setBuyUpdate">
+		update ${table_member} set grade = #{dto.grade}, buy = #{dto.buy} where no = #{dto.no}
+	</update>
+	
+	<delete id="setDelete">
+		delete from ${table_member} where no = #{dto.no}
+	</delete>
+</mapper>

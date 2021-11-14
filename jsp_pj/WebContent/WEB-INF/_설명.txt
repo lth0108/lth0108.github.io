@@ -1,0 +1,25 @@
+맵(map)
+키 : 값
+key : value
+{
+	"brand" : "benz",
+	"color" : "red",
+	"created" : "2000",
+	"price" : "1000000"
+}
+"price" : "2000"
+"price2" : "1000000"
+
+이미 존재하는 키를 추가 : 값 수정
+존재하지 않는 키 추가 : 값 추가
+(맵은 순서가 존재하지않음)
+
+{ "brand":"benz", "color":"red", "created":"2000", "price" : "2000", "price2" : "1000000" }
+
+
+Map<String, Object> map = new HashMap<>();
+
+
+<인덱스>
+List<String> list = new ArrayList<>();
+list = { 'aaa', 'bbb', '111', 'ccc', '333' }
