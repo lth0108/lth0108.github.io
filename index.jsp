@@ -18,12 +18,12 @@
 }
 #projects{
 	background-color:#dfe1d5;
-	height: 200%;
+	height: 620%;
 }
 #contact{
 	background-color:#333135;
 	color:white;
-	height: 50%;
+	height: 60%;
 }
 .skills {
 	width: 200px; height: 200px; background-size: cover; display: inline-block;
@@ -158,10 +158,55 @@
 		<div style="font-size: 20px; padding-left: 650px;">
 			Javascript, Jquery, Oracle DB, HTML, CSS
 		</div>
-		
+		<br><br><br>
 		
 		<div style="font-size: 30px; padding-left: 650px; padding-top: 70px;">
-			<img src="/jsp_pj/attach/img/member_chuga.gif" style="width: 80%; height: 80%;">
+			<b>회원등록, 수정, 삭제 페이지<br></b>
+		</div>
+		<div style="font-size: 20px; padding-left: 650px;">
+			회원등록과 로그인 기능을 가진 페이지입니다.<br>
+			<img src="/jsp_pj/attach/img/gif/member_page1.gif" style="width: 80%; height: 80%;"><br><br>
+			
+			user 계정은 회원등록, 수정을 사용할 수 있고, 그 외의 계정은 본인의 회원정보 수정까지만 사용가능하도록,<br>
+			admin 계정으로는 등록, 수정, 삭제 모든 기능이 사용가능한 회원관리 페이지입니다.<br>
+			<img src="/jsp_pj/attach/img/gif/member_page2.gif" style="width: 80%; height: 80%;"><br><br>
+		</div>
+		
+		<div style="font-size: 30px; padding-left: 650px; padding-top: 70px;">
+			<b>성정등록, 수정, 삭제 페이지<br></b>
+		</div>
+		<div style="font-size: 20px; padding-left: 650px;">
+			등록한 회원의 아이디를 선택하여 성적을 등록, 수정, 삭제, 검색하는 페이지입니다.<br>
+			<img src="/jsp_pj/attach/img/gif/sungjuk_page.gif" style="width: 80%; height: 80%;"><br><br>
+		</div>
+		
+		<div style="font-size: 30px; padding-left: 650px; padding-top: 70px;">
+			<b>메모 등록, 수정, 삭제 페이지입니다.<br></b>
+		</div>
+		<div style="font-size: 20px; padding-left: 650px;">
+			메모를 등록한 후 jquery를 사용하여 등록버튼이 수정, 삭제로 바뀌도록 만들었습니다.<br>
+			<img src="/jsp_pj/attach/img/gif/memo_page.gif" style="width: 80%; height: 80%;"><br><br>
+		</div>
+		
+		<div style="font-size: 30px; padding-left: 650px; padding-top: 70px;">
+			<b>상품 등록, 장바구니 관리, 구매 페이지입니다.<br></b>
+		</div>
+		<div style="font-size: 20px; padding-left: 650px;">
+			<img src="/jsp_pj/attach/img/gif/shop_page.gif" style="width: 80%; height: 80%;"><br><br>
+		</div>
+		
+		<div style="font-size: 30px; padding-left: 650px; padding-top: 70px;">
+			<b>게시글, 댓글을 등록하는 게시글 페이지입니다.<br></b>
+		</div>
+		<div style="font-size: 20px; padding-left: 650px;">
+			<img src="/jsp_pj/attach/img/gif/board_page.gif" style="width: 80%; height: 80%;"><br><br>
+		</div>
+		
+		<div style="font-size: 30px; padding-left: 650px; padding-top: 70px;">
+			<b>장바구니에 등록된 상품별 차트입니다.<br></b>
+		</div>
+		<div style="font-size: 20px; padding-left: 650px;">
+			<img src="/jsp_pj/attach/img/gif/chart_page.gif" style="width: 80%; height: 80%;"><br><br>
 		</div>
 	
 	</div>
@@ -170,8 +215,9 @@
 		<div style="font-size: 50px; padding-left: 650px; padding-top: 100px;">
 			<b>Contact</b>
 		</div>
-		<div style="font-size: 30px; padding-left: 650px; padding-top: 70px;">
+		<div style="font-size: 30px; padding-top: 70px; text-align: center;">
 			<b>E-mail : taehan0108@gmail.com</b><br><br>
+			<a href="https://github.com/lth0108/lth0108.github.io"><img src="/jsp_pj/attach/img/git.png" style="width: 100px; height: 100px;"><br><br></a>
 		</div>
 	</div>
 </div>
